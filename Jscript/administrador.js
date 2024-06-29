@@ -25,7 +25,3 @@ function agregarUsuario() {
     return false;
 }
 
-function cerrarSesion() {
-    localStorage.clear();
-    window.location.href = '../Html/login.html';
-}
