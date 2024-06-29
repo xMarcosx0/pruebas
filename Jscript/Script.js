@@ -44,7 +44,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
             window.location.href = '../Html/veterinario.html';
             break;
           default:
-            alert('No se ha definido una redirección para este usuario.');
+            window.location.href = '../Html/login.html';
             break;
         }
       } else {
