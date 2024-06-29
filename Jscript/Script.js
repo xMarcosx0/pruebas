@@ -54,28 +54,4 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     .catch(error => console.error('Error:', error));
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  var currentUser = localStorage.getItem('currentUser');
-  console.log(localStorage.getItem('currentUser'));
 
-  if (currentUser) {
-    var user = JSON.parse(currentUser);
-    console.log('Usuario autenticado:', user.nombres, user.apellidos);
-
-    if (user.rol === 'Admin') {
-      window.location.href = '../Html/administrador.html';
-
-    }
-    if (user.rol === 'Trabajador') {
-      window.location.href = '../Html/trabajador.html';
-
-    }
-    if (user.rol === 'Veterinario') {
-      window.location.href = '../Html/veterinario.html';
-
-    }
-    
-            window.location.href = '../Html/login.html';
-  }
-}
-);
