@@ -9,3 +9,7 @@ function mostrarSeccion(seccionId) {
     });
 }
 
+function cerrarSesion() {
+    localStorage.removeItem('currentUser');
+    window.location.href = "../Html/login.html";
+}
