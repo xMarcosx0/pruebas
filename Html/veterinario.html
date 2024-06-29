@@ -1,229 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veterinario</title>
-    <link rel="stylesheet" href="../Css/estilovt.css">
+    <title>Interfaz Veterinaria - Gestión Avícola</title>
+    <link rel="stylesheet" href="../Css/sty_vt.css">
 </head>
 
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1>Gestión Avícola</h1>
+            <nav>
+                <ul>
+                    <li><a href="#bienvenida">Bienvenida</a></li>
+                    <li><a href="#resumen-salud">Resumen de Salud</a></li>
+                    <li><a href="#notificaciones">Notificaciones</a></li>
+                    <li><a href="#gestion-salud">Gestión de Salud</a></li>
+                    <li><a href="#reportes-salud">Reportes de Salud</a></li>
+                    <li><a href="#comunicacion">Comunicación</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <h1>Panel Veterinario</h1>
+            </header>
 
-    <body>
 
-    
-    
-<header>
+            <section id="b1" class="card welcome-section">
+                <h2>Bienvenida</h2>
+                <p>"Nos enorgullece ser especialistas en el cuidado de aves de corral, centrándonos especialmente en
+                    pollos.
+                    Nuestro equipo de veterinarios altamente capacitados está dedicado a garantizar la salud y el
+                    bienestar
+                    óptimos de sus aves. Con un enfoque centrado en la prevención y el cuidado integral, trabajamos
+                    incansablemente para asegurarnos de que sus aves reciban la mejor atención posible. Ya sea a través
+                    de
+                    programas de vacunación, monitoreo constante de la salud o asesoramiento personalizado sobre
+                    prácticas de
+                    manejo, estamos aquí para brindarle tranquilidad y resultados excepcionales en la salud y producción
+                    de sus
+                    aves de corral."
+                </p>
 
-    <img src="../img/logopollo.jpeg" class="imagen">
-    <h1>Gestion de Granjas Avicolas (Veterinario)</h1>
-    
+
+            </section>
+            <div class="buttons">
+                <button onclick="ocultar()">OCULTAR</button>
+                <button onclick="mostrar()">MOSTRAR</button>
+            </div>
+
+
+            <section id="resumen-salud" class="card">
+                <h2>Resumen de Salud de las Aves</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+
+            <section id="notificaciones" class="card">
+                <h2>Notificaciones Importantes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+
+
+            <form class="form2" id="form2">
+                <h2>Registro de Diagnósticos y Tratamientos</h2>
+                <label for="registro_fecha">Fecha del Registro:</label>
+                <input type="date" id="registro_fecha" name="registro_fecha"><br><br>
+
+                <label for="diagnostico">Diagnóstico:</label><br>
+                <textarea id="diagnostico" name="diagnostico"></textarea><br><br>
+
+                <label for="tratamiento_prescrito">Tratamiento Prescrito:</label>
+                <textarea id="tratamiento_prescrito" name="tratamiento_prescrito"></textarea><br><br>
+
+                <label for="inicio_tratamiento">Fecha de Inicio del Tratamiento:</label>
+                <input type="date" id="inicio_tratamiento" name="inicio_tratamiento"><br><br>
+
+                <label for="fin_tratamiento">Fecha de Finalización del Tratamiento:</label>
+                <input type="date" id="fin_tratamiento" name="fin_tratamiento"><br><br>
+
+                <label for="resultado_tratamiento">Resultado del Tratamiento:</label>
+                <textarea id="resultado_tratamiento" name="resultado_tratamiento"></textarea><br><br>
+
+                <label for="adjuntar_documentos">Adjuntar Documentos:</label>
+                <input type="file" id="adjuntar_documentos" name="adjuntar_documentos" multiple><br><br>
+
+                <input type="submit" value="Enviar Registro">
+            </form>
+            <div id="json-output2"
+                style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px; margin-top: 20px;">
+            </div>
+            <h3>Historial Reciente</h3>
+            <section id="historial-reciente" class="card">
+                <h2>Historial Reciente</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID del Lote</th>
+                            <th>Fecha</th>
+                            <th>Diagnóstico</th>
+                            <th>Tratamiento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </section>
+
+
+
+            <section id="reportes-salud" class="card">
+                <h2>Reportes de Salud</h2>
+                <form id="form-generar-reportes">
+                    <h3>Generar Reportes</h3>
+                    <label for="fecha-inicio">Fecha de Inicio:</label>
+                    <input type="date" id="fecha-inicio" name="fecha-inicio">
+
+                    <label for="fecha-fin">Fecha de Fin:</label>
+                    <input type="date" id="fecha-fin" name="fecha-fin">
+
+                    <button type="submit">Generar Reporte</button>
+                </form>
+                <form id="form-exportar-reportes">
+                    <h3>Exportar Reportes</h3>
+                    <label for="formato">Formato de Exportación:</label>
+                    <select id="formato" name="formato">
+                        <option value="pdf">PDF</option>
+                        <option value="excel">Excel</option>
+                    </select>
+
+                    <button type="submit">Exportar</button>
+                </form>
+                <h3>Reportes Recientes</h3>
+                <table id="reportes-recientes">
+                    <thead>
+                        <tr>
+                            <th>Fecha de Generación</th>
+                            <th>Periodo</th>
+                            <th>Formato</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+            </section>
+
+
+            <section id="comunicacion" class="card">
+                <h2>Comunicación</h2>
+                <form id="form-mensajes">
+                    <h3>Mensajes y Avisos</h3>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje"></textarea>
+
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+                <form id="form-contacto">
+                    <h3>Contactar con Trabajadores/Administrador</h3>
+                    <label for="contacto">Para:</label>
+                    <select id="contacto" name="contacto">
+                        <option value="trabajadores">Trabajadores</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
+
+                    <label for="mensaje-contacto">Mensaje:</label>
+                    <textarea id="mensaje-contacto" name="mensaje-contacto" placeholder="Escriba su mensaje"></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </main>
     </div>
-    </header>
- 
-        <div class="Menuh">
-            <a href="#">Inicio</a>
-        <a href="#">Sobre nosotros</a>
-        <a href="#">Misión</a>
-        <a href="#">Visión </a>
-        </div>
-        <div class="encabezado-img">
-            
-           
+    <footer>
+        <p>&copy; 2024 Gestión de Granjas Avícolas. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../Jscript/script_vt.js"></script>
+</body>
 
-       
-            
-            
-            </div> 
-            <div class="parrafo">
-                <p>"Nos enorgullece ser especialistas en el cuidado de aves de corral, centrándonos especialmente en pollos. Nuestro equipo de veterinarios altamente capacitados está dedicado a garantizar la salud y el bienestar óptimos de sus aves. Con un enfoque centrado en la prevención y el cuidado integral, trabajamos incansablemente para asegurarnos de que sus aves reciban la mejor atención posible. Ya sea a través de programas de vacunación, monitoreo constante de la salud o asesoramiento personalizado sobre prácticas de manejo, estamos aquí para brindarle tranquilidad y resultados excepcionales en la salud y producción de sus aves de corral."</p>
-            </div>
-            
-            <br><br>
-            <div class="container">
-            <div class="items">
-            <form class="frm"  id="frm">
-                <h3>Formulario </h3>
-                <h3>Informacion Del veterinario</h3>
-                <label for="apellido1">Primer Apellido</label> <br>
-                <input type="text"  id="apellido1" name="apellido1" placeholder="Escriba su apellido" minlength="1" maxlength="10" required/><br>
-                <label for="apellido2">Segundo Apellido </label> <br>
-                <input type="text"  id="apellido2" name="apellido2" placeholder="Escriba su apellido" minlength="1" maxlength="10" required/><br>
-                <label for="nombres">Nombres</label> <br>
-                <input type="text"  id="nombres" maxlength="10" minlength="1" name="nombres" required/><br>
-                <label for="edad">Edad</label> <br>
-                <input type="number" id="edad" min="1" max="90"  required/><br>
-                <label for="Dirección">Dirección</label> <br>
-                <input type="text"  id="Dirección" required/><br>
-                <label for="telefono">Teléfono</label> <br>
-                <input type="tel"  id="telefono" minlength="1" maxlength="10" required/><br>
-                <label for="email">Email</label> <br>
-                <input type="email"  id="email" required/><br>
-                <label> Genero</label> <br>
-                <label for="masculino">M</label> 
-                <input type="radio" name="sexo" id="masculino"/>
-                <label for="femenino">F</label> 
-                <input type="radio" name="sexo" id="femenino" /><br>
-                
-                <h3>Informacion de la Granja</h3>
-                <label >Tamaño de granja</label> <br>
-                <select >
-                    <option selected="true">Pequeña</option>
-                    <option>Grande</option>
-                    <option>Mediana</option>
-                    <option>Muy grande</option>
-                </select><br>
-                <br>
-                <label for="n_granja">Nombre de la Granja:</label><br>
-                <input type="text" id="n_granja"><br>
-                
-                <label for="ubicacion_g">Ubicación de la Granja:<label><br>
-                    <input type="text" id="ubicacion_g" required><br>
-                
-                <label for="address">Dirección:</label><br>
-                <input type="text" id="address"><br>
-                
-                <label for="ciudad">Ciudad:</label><br>
-                <input type="text" id="ciudad"><br>
-                
-                <label for="state">Departamento:</label><br>
-                <input type="text" id="state"><br><br>
-                
-                <label>Tipo de Producción:</label><br>
-                <input type="checkbox" id="huevos" value="huevos">
-                <label for="huevos">Huevos</label><br>
-                
-                <input type="checkbox" id="carne" value="carne">
-                <label for="carne">Carne</label><br>
-                
-                <input type="checkbox" id="otros" value="otros">
-                <label for="otros">Otros (especificar):</label>
-                
-                <input type="text" id="other" ><br><br>
-                
-                <input type="submit" value="Enviar">
-              </form>
-              </div>
-                <br>
-                <div id="json-output" style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px; margin-top: 20px;">
-                   
-                </div>
-
-              <div class="items">
-                <form class="form2" id="form2">
-                    <h2>Registro de Diagnósticos y Tratamientos</h2>
-                    <label for="registro_fecha">Fecha del Registro:</label>
-                    <input type="date" id="registro_fecha" name="registro_fecha"><br><br>
-                    
-                    <label for="diagnostico">Diagnóstico:</label>
-                    <textarea id="diagnostico" name="diagnostico"></textarea><br><br>
-                    
-                    <label for="tratamiento_prescrito">Tratamiento Prescrito:</label>
-                    <textarea id="tratamiento_prescrito" name="tratamiento_prescrito"></textarea><br><br>
-                    
-                    <label for="inicio_tratamiento">Fecha de Inicio del Tratamiento:</label>
-                    <input type="date" id="inicio_tratamiento" name="inicio_tratamiento"><br><br>
-                    
-                    <label for="fin_tratamiento">Fecha de Finalización del Tratamiento:</label>
-                    <input type="date" id="fin_tratamiento" name="fin_tratamiento"><br><br>
-                    
-                    <label for="resultado_tratamiento">Resultado del Tratamiento:</label>
-                    <textarea id="resultado_tratamiento" name="resultado_tratamiento"></textarea><br><br>
-                    
-                    <label for="adjuntar_documentos">Adjuntar Documentos:</label>
-                    <input type="file" id="adjuntar_documentos" name="adjuntar_documentos" multiple><br><br>
-                    
-                    <input type="submit" value="Enviar Registro" >
-                  </form>
-
-                </div>
-                <div id="json-output2" style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px; margin-top: 20px;">
-                    
-                </div>
-                
-                  
-                  <div id="jsonOutput"></div>
-
-                  <div class="mapa" ></a><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.704115575324!2d-74.88357982423081!3d10.910076556712793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5d5d995a68769%3A0x95e83f7b42fc7d3f!2sHUEVOS%20SOL!5e0!3m2!1ses!2sco!4v1717851780607!5m2!1ses!2sco" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div>
-                  
-            </div>
-            <br><br>
-            <div class="youtube-video">
-                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=4Tid_-3zWBw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-           
-                
-         
-        
-            <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
-            <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-        </body>       
-   
-        <br><br>
-
-        <footer class="footer">
-            <ul class="social-icon">
-                <li class="icon-elem">
-                    <a href="https://youtu.be/dhsy6epaJGs?si=b_clZdB8C_bjNkIA" class="icon">
-                        <ion-icon name="logo-youtube"></ion-icon>
-                    </a>
-                </li>
-          
-            
-                <li class="icon-elem">
-                    <a href="" class="icon">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                </li>
-            
-            
-                <li class="icon-elem">
-                    <a href="" class="icon">
-                        <ion-icon name="logo-whatsapp"></ion-icon>
-                    </a>
-                </li>
-            
-            
-                <li class="icon-elem">
-                    <a href="" class="icon">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
-                </li>
-        
-            
-                <li class="icon-elem">
-                    <a href="" class="icon">
-                        <ion-icon name="mail-outline"></ion-icon>
-                    </a>
-                </li>
-            </ul>
-
-                <ul class="menu">
-
-                <li class="menu-elem">
-                    <a href="" class="menu-icon">Inicio</a>
-                </li>
-
-                <li class="menu-elem">
-                    <a href="" class="menu-icon">Equipo</a>
-                </li>
-
-                <li class="menu-elem">
-                    <a href="" class="menu-icon">Contacto</a>
-                </li>
-
-                <li class="menu-elem">
-                    <a href="" class="menu-icon">Video</a>
-                </li>
-
-                <li class="menu-elem">
-                    <a href="https://maps.app.goo.gl/r37VsAvZRYKkYF3e8" class="menu-icon">ubicacion</a>
-                </li>
-
-            </ul>
-
-            <p class="p1"> Año 2024 | Todos los derechos reservados </p>
-            </footer>
-            
-               <script src="Jscript/admin.js"></script>
 </html>
