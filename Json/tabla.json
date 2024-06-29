@@ -1,0 +1,34 @@
+{
+    
+    "lunes": [
+      "Granja huevos sol",
+      "Granja Bella Vista",
+      "Granja Santa Rosa",
+      "Granja San Isidro"
+    ],
+    "martes": [
+      "Granja La Esperanza",
+      "Granja Los Pinos",
+      "Granja El Recuerdo",
+      "Granja La Colina"
+    ],
+    "miércoles": [
+      "Granja El Roble",
+      "Granja La Palma",
+      "Granja La Montaña",
+      "Granja La Cima"
+    ],
+    "jueves": [
+      "Granja La Aurora",
+      "Granja San Rafael",
+      "Granja El Paraíso",
+      "Granja Los Cedros"
+    ],
+    "viernes": [
+      "Granja El Edén",
+      "Granja Los Girasoles",
+      "Granja Los Alpes",
+      "Granja Santa Clara"
+    ]
+  }
+  

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador Avícola</title>
+    <link rel="stylesheet" href="../Css/estiloAdmin.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="../img/admin.png" class="imagen" alt="Logo Administrador Avícola">
+            <div class="header-text">
+                <h1>Administrador</h1>
+                <h2>Gestión de Granjas Avícolas</h2>
+            </div>
+            <button class="logout-button" onclick="cerrarSesion()">Cerrar sesión</button>
+        </div>
+    </header>
+    
+    <div class="Menuh">
+        <a href="#" onclick="showOption(1)">Menú principal</a>
+        <a href="#" onclick="showOption(2)">Usuarios</a>
+        <a href="#" onclick="showOption(3)">Agregar Usuario</a>
+    </div>
+
+    <div class="content">
+        <div class="items" id="option1">
+            <div class="parrafo-container">
+                <div class="parrafo-content">
+                    <p>Como administrador avícola, garantizo la eficiencia y el bienestar de nuestros trabajadores y aves. Gestiono la información del personal, asegurando capacitación adecuada y asignación eficiente para optimizar la producción y el cuidado de los pollos. Superviso de cerca el estado de las aves con sistemas modernos de gestión de datos, asegurando salud óptima y capacidad para prever problemas. Implemento prácticas de manejo eficientes y sostenibles, colaborando con veterinarios para cumplir estándares de bienestar animal y bioseguridad. Como objetivo, mantengo un equilibrio entre el bienestar de los pollos y el rendimiento económico, asegurando un entorno de trabajo seguro y gratificante.</p>
+                </div>
+                <img src="../img/adminphoto2.jpg" alt="Administración Avícola" class="admin-photo">
+            </div>
+        </div>
+        <div>
+            <table id="tabla"></table>
+        </div>
+        <div class="items" id="option2" style="display:none;">
+            <table class="user-table">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Edad</th>
+                    <th>Contraseña</th>
+                    <th>Rol</th>
+                </tr>
+                <tr>
+                    <td>Marcos</td>
+                    <td>Marquez</td>
+                    <td>19</td>
+                    <td>1234</td>
+                    <td>Admin</td>
+                </tr>
+                <tr>
+                    <td>Emily</td>
+                    <td>Mercado</td>
+                    <td>18</td>
+                    <td>1989</td>
+                    <td>Trabajadora</td>
+                </tr>
+                <tr>
+                    <td>Miguel</td>
+                    <td>Molinares</td>
+                    <td>18</td>
+                    <td>2025</td>
+                    <td>Veterinario</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="items" id="option3" style="display:none;">
+            <div class="user-form">
+                <h3>Agregar Nuevo Usuario</h3>
+                <form id="newUserForm" onsubmit="return agregarUsuario()">
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required><br>
+
+                    <label for="documento">Número de Documento:</label><br>
+                    <input type="text" id="documento" name="documento" required><br>
+
+                    <label for="contrasena">Contraseña:</label><br>
+                    <input type="password" id="contrasena" name="contrasena" required><br>
+
+                    <label for="rol">Rol:</label><br>
+                    <select id="rol" name="rol" required>
+                        <option value="">Seleccione un rol</option>
+                        <option value="admin">Administrador</option>
+                        <option value="trabajador">Trabajador</option>
+                        <option value="veterinario">Veterinario</option>
+                    </select><br>
+
+                    <input type="submit" value="Agregar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="p1">© Año 2024 | Todos los derechos reservados </p>
+    </footer>
+
+    <script src="../Jscript/admin.js"></script>
+    <script>
+        function showOption(option) {
+            document.getElementById('option1').style.display = 'none';
+            document.getElementById('option2').style.display = 'none';
+            document.getElementById('option3').style.display = 'none';
+
+            if (option === 1) {
+                document.getElementById('option1').style.display = 'block';
+            } else if (option === 2) {
+                document.getElementById('option2').style.display = 'block';
+            } else if (option === 3) {
+                document.getElementById('option3').style.display = 'block';
+            }
+        }
+
+        function cerrarSesion() {
+            window.location.href = '../Html/login.html';
+        }
+    </script>
+</body>
+</html>

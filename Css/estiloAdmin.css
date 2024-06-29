@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(245, 238, 181);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgb(92, 155, 90);
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.logout-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(50, 83, 55); 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #3a5d3a;
+}
+
+.imagen {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.header-text h1,
+.header-text h2 {
+    margin: 0;
+    text-align: left;
+}
+
+.header-text h1 {
+    font-size: 24px;
+}
+
+.header-text h2 {
+    font-size: 18px;
+    color: rgb(34, 31, 31);
+}
+
+.Menuh {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(50, 83, 55);
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.Menuh a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.Menuh a:hover {
+    background-color: white;
+    color: black;
+}
+
+.parrafo-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.parrafo-container p {
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.parrafo-container img {
+    max-width: 300px;
+    height: auto;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.user-table {
+    width: 80%;
+    margin-top: 20px;
+    background-color: rgb(92, 155, 90);
+    border: 2px solid rgb(50, 83, 55);
+    border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #f2f2f2;
+}
+
+.footer {
+    background-color: rgb(92, 155, 90);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.user-form {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.user-form input[type="text"],
+.user-form input[type="password"],
+.user-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.user-form input[type="submit"] {
+    background-color: rgb(50, 83, 55);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-form input[type="submit"]:hover {
+    background-color: #3a5d3a;
+}

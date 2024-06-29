@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control del Trabajador</title>
+    <link rel="stylesheet" href="../Css/estilotbj.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Trabajador</div>
+        <ul>
+            <li><a href="#" onclick="mostrarSeccion('resumen-diario')">Panel de Control</a></li>
+            <li><a href="#" onclick="mostrarSeccion('tareas-asignadas')">Tareas</a></li>
+            <li><a href="#" onclick="mostrarSeccion('notificaciones-importantes')">Notificaciones</a></li>
+            <li><a href="#" onclick="mostrarSeccion('condiciones-ambientales')">Condiciones Ambientales</a></li>
+        </ul>
+        <button class="logout-button" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </nav>
+    <main>
+        <section id="resumen-diario">
+            <h2>Resumen Diario</h2>
+            <div class="panel-content">
+                <div>
+                    <h3>Producción de Huevos</h3>
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Cantidad</th>
+                            <th>Calidad</th>
+                        </tr>
+                        <tr>
+                            <td>24/06/2024</td>
+                            <td>500</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td>23/06/2024</td>
+                            <td>450</td>
+                            <td>Media</td>
+                        </tr>
+                        <tr>
+                            <td>22/06/2024</td>
+                            <td>470</td>
+                            <td>Alta</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h3>Acciones Realizadas</h3>
+                    <ul>
+                        <li>24/06/2024: Alimentación de las aves</li>
+                        <li>23/06/2024: Limpieza de los corrales</li>
+                        <li>22/06/2024: Inspección de sistema de ventilación</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Condiciones del Clima</h3>
+                    <img src="path_to_your_chart_image.png" alt="Gráfico de temperatura">
+                </div>
+            </div>
+        </section>
+        <section id="notificaciones-importantes" class="hidden">
+            <h2>Notificaciones Importantes</h2>
+            <ul id="notificaciones">
+            </ul>
+        </section>
+        <section id="tareas-asignadas" class="hidden">
+            <h2>Tareas Asignadas</h2>
+            <div class="panel-content">
+                <div>
+                    <h3>Tarea 1</h3>
+                    <p>Descripción de la tarea 1.</p>
+                    <p>Fecha límite: 30 de junio de 2024</p>
+                </div>
+                <div>
+                    <h3>Tarea 2</h3>
+                    <p>Descripción de la tarea 2.</p>
+                    <p>Fecha límite: 26 de julio de 2024</p>
+                </div>
+            </div>
+        </section>
+        <section id="condiciones-ambientales" class="hidden">
+            <h2>Condiciones Ambientales</h2>
+            <div id="galpones">
+                <!-- Información de condiciones ambientales -->
+            </div>
+        </section>
+    </main>
+    <script src="../Jscript/worker.js"></script>
+</body>
+</html>

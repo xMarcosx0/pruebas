@@ -1,0 +1,7 @@
+{
+  "users": [
+    {"username": "Veterinario", "password": "Veterinario", "name": "Sr veterinario"},
+    {"username": "Trabajador", "password": "Trabajador", "name": "Sr Trabajador"},
+    {"username": "Administrador", "password": "Administrador", "name": "Sr Administrador"}
+  ]
+}

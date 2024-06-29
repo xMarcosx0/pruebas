@@ -1,0 +1,45 @@
+{
+    "resumenDiario": {
+        "tareasCompletadas": 3,
+        "tareasPendientes": 2,
+        "avesInspeccionadas": 50
+    },
+    "notificacionesImportantes": [
+        "Temperatura alta en el Galpón 3",
+        "Nueva tarea asignada"
+    ],
+    "tareasAsignadas": [
+        {
+            "descripcion": "Alimentar a las aves",
+            "fechaVencimiento": "Hoy",
+            "estado": false
+        },
+        {
+            "descripcion": "Limpieza del Galpón 2",
+            "fechaVencimiento": "En progreso",
+            "estado": false
+        },
+        {
+            "descripcion": "Inspección de aves",
+            "fechaVencimiento": "Pendiente",
+            "estado": false
+        }
+    ],
+    "condicionesAmbientales": [
+        {
+            "nombre": "Galapon 1",
+            "temperatura": 25,
+            "humedad": 60
+        },
+        {
+            "nombre": "Galapon 1",
+            "temperatura": 27,
+            "humedad": 65
+        },
+        {
+            "nombre": "Galapon 1",
+            "temperatura": 30,
+            "humedad": 70
+        }
+    ]
+}

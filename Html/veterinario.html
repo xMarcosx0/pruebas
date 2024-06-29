@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinario</title>
+    <link rel="stylesheet" href="../Css/estilovt.css">
+</head>
+
+
+    <body>
+
+    
+    
+<header>
+
+    <img src="../img/logopollo.jpeg" class="imagen">
+    <h1>Gestion de Granjas Avicolas (Veterinario)</h1>
+    
+    </div>
+    </header>
+ 
+        <div class="Menuh">
+            <a href="#">Inicio</a>
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Misión</a>
+        <a href="#">Visión </a>
+        </div>
+        <div class="encabezado-img">
+            
+           
+
+       
+            
+            
+            </div> 
+            <div class="parrafo">
+                <p>"Nos enorgullece ser especialistas en el cuidado de aves de corral, centrándonos especialmente en pollos. Nuestro equipo de veterinarios altamente capacitados está dedicado a garantizar la salud y el bienestar óptimos de sus aves. Con un enfoque centrado en la prevención y el cuidado integral, trabajamos incansablemente para asegurarnos de que sus aves reciban la mejor atención posible. Ya sea a través de programas de vacunación, monitoreo constante de la salud o asesoramiento personalizado sobre prácticas de manejo, estamos aquí para brindarle tranquilidad y resultados excepcionales en la salud y producción de sus aves de corral."</p>
+            </div>
+            
+            <br><br>
+            <div class="container">
+            <div class="items">
+            <form class="frm"  id="frm">
+                <h3>Formulario </h3>
+                <h3>Informacion Del veterinario</h3>
+                <label for="apellido1">Primer Apellido</label> <br>
+                <input type="text"  id="apellido1" name="apellido1" placeholder="Escriba su apellido" minlength="1" maxlength="10" required/><br>
+                <label for="apellido2">Segundo Apellido </label> <br>
+                <input type="text"  id="apellido2" name="apellido2" placeholder="Escriba su apellido" minlength="1" maxlength="10" required/><br>
+                <label for="nombres">Nombres</label> <br>
+                <input type="text"  id="nombres" maxlength="10" minlength="1" name="nombres" required/><br>
+                <label for="edad">Edad</label> <br>
+                <input type="number" id="edad" min="1" max="90"  required/><br>
+                <label for="Dirección">Dirección</label> <br>
+                <input type="text"  id="Dirección" required/><br>
+                <label for="telefono">Teléfono</label> <br>
+                <input type="tel"  id="telefono" minlength="1" maxlength="10" required/><br>
+                <label for="email">Email</label> <br>
+                <input type="email"  id="email" required/><br>
+                <label> Genero</label> <br>
+                <label for="masculino">M</label> 
+                <input type="radio" name="sexo" id="masculino"/>
+                <label for="femenino">F</label> 
+                <input type="radio" name="sexo" id="femenino" /><br>
+                
+                <h3>Informacion de la Granja</h3>
+                <label >Tamaño de granja</label> <br>
+                <select >
+                    <option selected="true">Pequeña</option>
+                    <option>Grande</option>
+                    <option>Mediana</option>
+                    <option>Muy grande</option>
+                </select><br>
+                <br>
+                <label for="n_granja">Nombre de la Granja:</label><br>
+                <input type="text" id="n_granja"><br>
+                
+                <label for="ubicacion_g">Ubicación de la Granja:<label><br>
+                    <input type="text" id="ubicacion_g" required><br>
+                
+                <label for="address">Dirección:</label><br>
+                <input type="text" id="address"><br>
+                
+                <label for="ciudad">Ciudad:</label><br>
+                <input type="text" id="ciudad"><br>
+                
+                <label for="state">Departamento:</label><br>
+                <input type="text" id="state"><br><br>
+                
+                <label>Tipo de Producción:</label><br>
+                <input type="checkbox" id="huevos" value="huevos">
+                <label for="huevos">Huevos</label><br>
+                
+                <input type="checkbox" id="carne" value="carne">
+                <label for="carne">Carne</label><br>
+                
+                <input type="checkbox" id="otros" value="otros">
+                <label for="otros">Otros (especificar):</label>
+                
+                <input type="text" id="other" ><br><br>
+                
+                <input type="submit" value="Enviar">
+              </form>
+              </div>
+                <br>
+                <div id="json-output" style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px; margin-top: 20px;">
+                   
+                </div>
+
+              <div class="items">
+                <form class="form2" id="form2">
+                    <h2>Registro de Diagnósticos y Tratamientos</h2>
+                    <label for="registro_fecha">Fecha del Registro:</label>
+                    <input type="date" id="registro_fecha" name="registro_fecha"><br><br>
+                    
+                    <label for="diagnostico">Diagnóstico:</label>
+                    <textarea id="diagnostico" name="diagnostico"></textarea><br><br>
+                    
+                    <label for="tratamiento_prescrito">Tratamiento Prescrito:</label>
+                    <textarea id="tratamiento_prescrito" name="tratamiento_prescrito"></textarea><br><br>
+                    
+                    <label for="inicio_tratamiento">Fecha de Inicio del Tratamiento:</label>
+                    <input type="date" id="inicio_tratamiento" name="inicio_tratamiento"><br><br>
+                    
+                    <label for="fin_tratamiento">Fecha de Finalización del Tratamiento:</label>
+                    <input type="date" id="fin_tratamiento" name="fin_tratamiento"><br><br>
+                    
+                    <label for="resultado_tratamiento">Resultado del Tratamiento:</label>
+                    <textarea id="resultado_tratamiento" name="resultado_tratamiento"></textarea><br><br>
+                    
+                    <label for="adjuntar_documentos">Adjuntar Documentos:</label>
+                    <input type="file" id="adjuntar_documentos" name="adjuntar_documentos" multiple><br><br>
+                    
+                    <input type="submit" value="Enviar Registro" >
+                  </form>
+
+                </div>
+                <div id="json-output2" style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px; margin-top: 20px;">
+                    
+                </div>
+                
+                  
+                  <div id="jsonOutput"></div>
+
+                  <div class="mapa" ></a><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.704115575324!2d-74.88357982423081!3d10.910076556712793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5d5d995a68769%3A0x95e83f7b42fc7d3f!2sHUEVOS%20SOL!5e0!3m2!1ses!2sco!4v1717851780607!5m2!1ses!2sco" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div>
+                  
+            </div>
+            <br><br>
+            <div class="youtube-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=4Tid_-3zWBw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+           
+                
+         
+        
+            <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
+            <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        </body>       
+   
+        <br><br>
+
+        <footer class="footer">
+            <ul class="social-icon">
+                <li class="icon-elem">
+                    <a href="https://youtu.be/dhsy6epaJGs?si=b_clZdB8C_bjNkIA" class="icon">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+                </li>
+          
+            
+                <li class="icon-elem">
+                    <a href="" class="icon">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+            
+            
+                <li class="icon-elem">
+                    <a href="" class="icon">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                    </a>
+                </li>
+            
+            
+                <li class="icon-elem">
+                    <a href="" class="icon">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+        
+            
+                <li class="icon-elem">
+                    <a href="" class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+
+                <ul class="menu">
+
+                <li class="menu-elem">
+                    <a href="" class="menu-icon">Inicio</a>
+                </li>
+
+                <li class="menu-elem">
+                    <a href="" class="menu-icon">Equipo</a>
+                </li>
+
+                <li class="menu-elem">
+                    <a href="" class="menu-icon">Contacto</a>
+                </li>
+
+                <li class="menu-elem">
+                    <a href="" class="menu-icon">Video</a>
+                </li>
+
+                <li class="menu-elem">
+                    <a href="https://maps.app.goo.gl/r37VsAvZRYKkYF3e8" class="menu-icon">ubicacion</a>
+                </li>
+
+            </ul>
+
+            <p class="p1"> Año 2024 | Todos los derechos reservados </p>
+            </footer>
+            
+               <script src="Jscript/admin.js"></script>
+</html>
