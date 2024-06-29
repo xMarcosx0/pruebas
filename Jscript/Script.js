@@ -74,7 +74,8 @@ document.addEventListener('DOMContentLoaded', function () {
       window.location.href = '../Html/veterinario.html';
 
     }
-    alert('No se ha definido una redirección para este usuario.');
+    
+            window.location.href = '../Html/login.html';
   }
 }
 );
